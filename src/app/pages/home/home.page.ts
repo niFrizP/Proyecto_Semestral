@@ -31,7 +31,7 @@ username:string='';
   }
 
   verMenu(){
-    this.menu.open('first')
+    this.menu.open('first');
   }
 
 }

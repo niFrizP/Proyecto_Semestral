@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-buttons slot="start">
+    <ion-back-button text="Regresar" mode="ios" defaultHref="/home"></ion-back-button>
+  </ion-buttons>
+  <ion-toolbar color="dark">
+    <ion-title>listado</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-list *ngFor="let item of ['Mario','Ricardo','Alejandro','Yazna','Mabel']">
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="#" />
+      </ion-avatar>
+      <ion-label>
+        <h2>{{item}}</h2>
+
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
