@@ -25,6 +25,18 @@ const routes: Routes = [
     path: 'listado',
     loadChildren: () => import('./pages/listado/listado.module').then( m => m.ListadoPageModule)
   },
+  {
+    path: 'refresco',
+    loadChildren: () => import('./pages/refresco/refresco.module').then( m => m.RefrescoPageModule)
+  },
+  {
+    path: 'generarcodigo',
+    loadChildren: () => import('./pages/generarcodigo/generarcodigo.module').then( m => m.GenerarcodigoPageModule)
+  },
+  {
+    path: 'acerca',
+    loadChildren: () => import('./pages/acerca/acerca.module').then( m => m.AcercaPageModule)
+  },
 ];
 
 @NgModule({

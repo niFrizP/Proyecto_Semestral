@@ -1,17 +1,18 @@
 <ion-header>
-  <ion-buttons slot="start">
-    <ion-back-button text="Regresar" mode="ios" defaultHref="/home"></ion-back-button>
-  </ion-buttons>
-  <ion-toolbar color="dark">
-    <ion-title>listado</ion-title>
+  <ion-toolbar>
+    <ion-icon slot="start" name="menu" size="large" class="ion-padding" (click)="verMenu()"></ion-icon>
+    <ion-title>Lista Asistencia</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-padding">
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
   <ion-list *ngFor="let item of ['Mario','Ricardo','Alejandro','Yazna','Mabel']">
     <ion-item>
       <ion-avatar slot="start">
-        <img src="#" />
+        <img src="/assets/user.png"/>
       </ion-avatar>
       <ion-label>
         <h2>{{item}}</h2>
