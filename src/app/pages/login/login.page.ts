@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavigationExtras, Router } from '@angular/router';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
@@ -12,7 +13,10 @@ export class LoginPage implements OnInit {
     password:''
   }
 
-  constructor(private router:Router){ }
+  constructor(
+    private router:Router,
+    private alertController:AlertController,
+    ){ }
 
   ngOnInit() {
   }
@@ -32,8 +36,32 @@ export class LoginPage implements OnInit {
       this.router.navigate(['/home',navigationExtras]);
     }
     else{
+      this.presentAlert();
       console.log("Acceso Denegado");
     }
   }
+  async presentAlert() {
+    const alert = await this.alertController.create({
+      header: 'Acceso Denegado',
+      subHeader: '',
+      message: 'Usuario o Contraseña incorrectos',
+      buttons: [
+        {
+          text: 'Intentar Nuevamente',
+          role: 'confirm',
+          handler: () => {
+            console.log('Confirmado');
+          },
+        },
+      ],
+      mode:'ios',
+      backdropDismiss:false,
+      cssClass:'miclase',
+    });
+    
+    await alert.present();
 
+    const { role } = await alert.onDidDismiss();
+    console.log(`Dismissed with role: ${role}`);
+  }
 }
