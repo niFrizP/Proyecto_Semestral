@@ -1,7 +1,10 @@
 {
   "name": "proyecto_semestral",
   "integrations": {
-    "capacitor": {}
+    "capacitor": {},
+    "cordova": {
+      "enabled": false
+    }
   },
   "type": "angular"
 }
