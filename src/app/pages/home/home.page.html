@@ -1,17 +1,18 @@
 <ion-header>
   <ion-toolbar>
+    <ion-icon slot="start" name="menu" size="large" class="ion-padding" (click)="verMenu()"></ion-icon>
     <ion-title>
-      Home
+      Inicio
     </ion-title>
-    <ion-icon slot="end" name="add"></ion-icon>
+    <ion-text slot="end">
+      <p>{{username||''}}</p>
+    </ion-text>
+    <ion-icon slot="end" name="person-circle-outline" class="ion-padding" size="large"></ion-icon>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-padding">
-  <ion-text color="primary">
-    <h1>Welcolme to the home!!!</h1>
+  <ion-text color="tertiary" type="ios">
+    <h3 class="animate__animated animate__bounceInUp">Bienvenido, <p>{{username||'anonimo'}}</p></h3>
   </ion-text>
- 
-
-
 </ion-content>
