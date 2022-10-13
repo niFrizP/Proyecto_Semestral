@@ -1,10 +1,12 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Login</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content class="ion-padding">
+
+  <h1>Bienvenido/a,</h1>
+  <h3>Inicia sesión para continuar!</h3>
+
+  <form>
+    <app-input label="Email"></app-input>
+    <app-input label="Contraseña" type="password"></app-input>
+    <a routerLink="#" class="forgot-password-link">¿Olvidó la contraseña?</a>
   <form #formlogin="ngForm"(ngSubmit)="onSubmit()">
     <ion-text color="primary">
       <h1 class="animate__animated animate__pulse">Iniciar sesión</h1>
@@ -19,7 +21,6 @@
       <ion-input required type="password" name="password" [(ngModel)]="usuario.password" clearInput></ion-input>
     </ion-item>
 
-    <ion-button expand="block" class="ion-margin-top" type="submit" [disabled]="formlogin.invalid">Login</ion-button>
+    <app-button label="Login"></app-button>
   </form>
-
 </ion-content>
