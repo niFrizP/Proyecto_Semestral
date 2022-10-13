@@ -2,25 +2,18 @@
 
   <h1>Bienvenido/a,</h1>
   <h3>Inicia sesión para continuar!</h3>
-
   <form>
-    <app-input label="Email"></app-input>
-    <app-input label="Contraseña" type="password"></app-input>
-    <a routerLink="#" class="forgot-password-link">¿Olvidó la contraseña?</a>
-  <form #formlogin="ngForm"(ngSubmit)="onSubmit()">
-    <ion-text color="primary">
-      <h1 class="animate__animated animate__pulse">Iniciar sesión</h1>
-    </ion-text>
 
-    <ion-item>
-      <ion-label position="floating">Usuario</ion-label>
-      <ion-input required type="username" name="username" [(ngModel)]="usuario.username" clearInput></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label position="floating">Contraseña</ion-label>
-      <ion-input required type="password" name="password" [(ngModel)]="usuario.password" clearInput></ion-input>
-    </ion-item>
+      <ion-item>
+        <ion-label position="floating">Usuario</ion-label>
+        <ion-input required type="username" name="username" [(ngModel)]="usuario.username" clearInput></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input required type="password" name="password" [(ngModel)]="usuario.password" clearInput></ion-input>
+      </ion-item>
 
-    <app-button label="Login"></app-button>
+      <app-button label="Login"></app-button>
   </form>
+
 </ion-content>
