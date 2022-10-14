@@ -1,19 +1,20 @@
 <ion-content class="ion-padding">
-
   <h1>Bienvenido/a,</h1>
   <h3>Inicia sesión para continuar!</h3>
   <form>
+  
+  <ion-item>
+      <ion-label position="floating">Usuario</ion-label>
+      <ion-input required type="username" name="username" [(ngModel)]="usuario.username" clearInput></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input required type="password" name="password" [(ngModel)]="usuario.password" clearInput></ion-input>
+    </ion-item>
 
-      <ion-item>
-        <ion-label position="floating">Usuario</ion-label>
-        <ion-input required type="username" name="username" [(ngModel)]="usuario.username" clearInput></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label position="floating">Contraseña</ion-label>
-        <ion-input required type="password" name="password" [(ngModel)]="usuario.password" clearInput></ion-input>
-      </ion-item>
+    <!-- <app-button label="Login"></app-button> -->
+    <ion-button [routerLink]="['/home']">Login</ion-button>
 
-      <app-button label="Login"></app-button>
   </form>
 
 </ion-content>
