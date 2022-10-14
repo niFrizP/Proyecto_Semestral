@@ -21,8 +21,11 @@ export class LoginPage implements OnInit {
   ngOnInit() {
   }
 
+
   onSubmit()
   {
+
+/*     this.addUser()
     if(this.usuario.username=="Admin" && this.usuario.password=="password")
     {
       let navigationExtras:NavigationExtras={
@@ -38,8 +41,9 @@ export class LoginPage implements OnInit {
     else{
       this.presentAlert();
       console.log("Acceso Denegado");
-    }
+    } */
   }
+
   async presentAlert() {
     const alert = await this.alertController.create({
       header: 'Acceso Denegado',
