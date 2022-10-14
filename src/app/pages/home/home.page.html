@@ -1,18 +1,31 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-icon slot="start" name="menu" size="large" class="ion-padding" (click)="verMenu()"></ion-icon>
-    <ion-title>
-      Inicio
-    </ion-title>
-    <ion-text slot="end">
-      <p>{{username||''}}</p>
-    </ion-text>
-    <ion-icon slot="end" name="person-circle-outline" class="ion-padding" size="large"></ion-icon>
-  </ion-toolbar>
-</ion-header>
+<ion-content>
+    <div class="main_content_div">
 
-<ion-content class="ion-padding">
-  <ion-text color="tertiary" type="ios">
-    <h3 class="animate__animated animate__bounceInUp">Bienvenido, <p>{{username||'anonimo'}}</p></h3>
-  </ion-text>
+      <ion-buttons slot="start" class="menu_btn">
+        <ion-menu-button color="light"></ion-menu-button>
+      </ion-buttons>
+
+      <div class="user_div">
+        <div class="first_div">
+          <ion-label class="welcome">Bienvenido/a</ion-label>
+          <ion-label class="username">Nicolás</ion-label>
+        </div>
+        <div class="user_back" [style.backgroundImage]="'url(assets/01.jpg)'"></div>
+      </div>
+
+      <div class="content_div animated bounceInUp">
+        <ion-label class="hola_asignatura">Hola, elija su asignatura</ion-label>
+
+        <ion-grid fixed>
+          <ion-row>
+            <ion-col size="6" (click)="goToSubject()" *ngFor="let item of subjects ">
+              <div class="col_div">
+                <img src="{{item.img}}" >
+                <ion-label>{{item.name}}</ion-label>
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+    </div>
 </ion-content>

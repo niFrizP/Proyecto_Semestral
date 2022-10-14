@@ -1,37 +1,46 @@
-import { Component} from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { MenuController } from '@ionic/angular';
-
+import { Component, OnInit } from '@angular/core';
+import { Router, NavigationExtras } from '@angular/router';
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
-export class HomePage{
-
-username:string='';
-
-  constructor(
-    private activatedRouter:ActivatedRoute, 
-    private router:Router,
-    private menu:MenuController,
-  ) {
-
-    this.activatedRouter.queryParams.subscribe(params=>{
-      if(this.router.getCurrentNavigation().extras.state){
-
-        let usuario=this.router.getCurrentNavigation().extras.state.miusuario;
-        console.log("Llego el state: " + usuario.username);
-        this.username=usuario.username;
-      }
+export class HomePage implements OnInit {
+subjects;
+  constructor(private router : Router) { }
       
-    })
-
-
+  ngOnInit() {
+    this.subjects = [
+      
+      {
+        img: 'assets/imgs/matematica.png',
+        name: 'Matematicas'
+      },
+      {
+        img: 'assets/imgs/antropologia.png',
+        name: 'Antropologia'
+      },
+      {
+        img: 'assets/imgs/comunicacion.png',
+        name: 'Comunicacion'
+      },
+      {
+        img: 'assets/imgs/estadistica.png',
+        name: 'Estadistica'
+      },
+      {
+        img: 'assets/imgs/programacion.png',
+        name: 'Programacion'
+      },
+      {
+        img: 'assets/imgs/ingles.png',
+        name: 'ingles'
+      },
+    ];
   }
 
-  verMenu(){
-    this.menu.open('first');
-  }
+goToSubject(){
+
+}
 
 }
