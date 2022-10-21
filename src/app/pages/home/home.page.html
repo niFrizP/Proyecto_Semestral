@@ -20,7 +20,7 @@
           <ion-row>
             <ion-col size="6" (click)="goToSubject()" *ngFor="let item of subjects ">
               <div class="col_div">
-                <img src="{{item.img}}" >
+                <img src="{{this.subjects}}" >
                 <ion-label>{{item.name}}</ion-label>
               </div>
             </ion-col>

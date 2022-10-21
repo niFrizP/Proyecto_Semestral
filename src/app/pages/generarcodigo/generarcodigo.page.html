@@ -1,4 +1,4 @@
-<ion-header>
+<ion-header [style.visibility]="content_visibility">
   <ion-toolbar>
     <ion-icon slot="start" name="menu" size="large" class="ion-padding" (click)="verMenu()"></ion-icon>
     <ion-title>Generador QR</ion-title>
@@ -6,9 +6,15 @@
 </ion-header>
 
 
-<ion-content class="ion-padding">
+<ion-content class="ion-padding" [style.visibility]="content_visibility">
   <ion-card-content>
     <p>Escanee el codigo para asistencia</p>
     <img src="/assets/QR.png"/>
+    <ion-button 
+    expand="block" 
+    class="ion-margin" 
+    (click)="escanear()">
+    Scan QR Code
+  </ion-button>
   </ion-card-content>
 </ion-content>

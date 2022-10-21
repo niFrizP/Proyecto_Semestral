@@ -25,23 +25,6 @@ export class LoginPage implements OnInit {
   onSubmit()
   {
 
-/*     this.addUser()
-    if(this.usuario.username=="Admin" && this.usuario.password=="password")
-    {
-      let navigationExtras:NavigationExtras={
-        state:{
-          usr:this.usuario,
-        }
-      }
-      console.log("Usuario Success");
-      console.log(this.usuario);
-
-      this.router.navigate(['/home',navigationExtras]);
-    }
-    else{
-      this.presentAlert();
-      console.log("Acceso Denegado");
-    } */
   }
 
   async presentAlert() {
