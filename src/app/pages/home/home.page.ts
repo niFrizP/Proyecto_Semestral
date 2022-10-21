@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, NavigationExtras } from '@angular/router';
+import { ComunicacionPage } from '../comunicacion/comunicacion.page';
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -21,8 +22,8 @@ subjects;
         name: 'Antropologia'
       },
       {
-        img: 'assets/imgs/comunicacion.png',
-        name: 'Comunicacion'
+        img: 'assets/imgs/comunicacion.png', 
+        name: 'Comunicacion',
       },
       {
         img: 'assets/imgs/estadistica.png',

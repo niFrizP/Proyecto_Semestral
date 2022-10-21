@@ -10,50 +10,45 @@
         <ion-thumbnail slot="start">
           <img src="../../../assets/imgs/antropologia.png" />
         </ion-thumbnail>
-        <ion-label>Antropologia</ion-label>
+        <ion-label [routerLink]="['/antropologia']">Antropologia</ion-label>
       </ion-item>
 
       <ion-item>
         <ion-thumbnail slot="start">
           <img src="../../../assets/imgs/comunicacion.png" />
         </ion-thumbnail>
-        <ion-label>Comunicación</ion-label>
+        <ion-label [routerLink]="['/comunicacion']">Comunicación</ion-label>
       </ion-item>
 
       <ion-item>
         <ion-thumbnail slot="start">
           <img src="../../../assets/imgs/estadistica.png" />
         </ion-thumbnail>
-        <ion-label>Estadistica</ion-label>
+        <ion-label [routerLink]="['/estadistica']">Estadistica</ion-label>
       </ion-item>
 
       <ion-item lines="none">
         <ion-thumbnail slot="start">
           <img src="../../../assets/imgs/ingles.png" />
         </ion-thumbnail>
-        <ion-label>Inglés</ion-label>
+        <ion-label [routerLink]="['/ingles']">Inglés</ion-label>
       </ion-item>
 
       <ion-item lines="none">
         <ion-thumbnail slot="start">
           <img src="../../../assets/imgs/matematica.png" />
         </ion-thumbnail>
-        <ion-label>Matemática</ion-label>
+        <ion-label [routerLink]="['/matematicas']">Matemática</ion-label>
       </ion-item>
 
       <ion-item lines="none">
         <ion-thumbnail slot="start">
           <img src="../../../assets/imgs/programacion.png" />
         </ion-thumbnail>
-        <ion-label>Porgramación</ion-label>
+        <ion-label [routerLink]="['/programacion']">Programación</ion-label>
       </ion-item>
     </ion-list>
   </ion-card-content>
 </ion-card>
-<ion-button [routerLink]="['/matematicas']">matematica</ion-button>
-<ion-button [routerLink]="['/antropologia']">antropologia</ion-button>
-<ion-button [routerLink]="['/comunicacion']">comunicacion</ion-button>
-<ion-button [routerLink]="['/estadistica']">estadistica</ion-button>
-<ion-button [routerLink]="['/ingles']">ingles</ion-button>
-<ion-button [routerLink]="['/programacion']">programacion</ion-button>
+
 </ion-content>
