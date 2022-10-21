@@ -26,6 +26,11 @@
 @import "~@ionic/angular/css/flex-utils.css";
 @import "./theme/fonts.scss";
 
+body.scanner-active {
+    --background: transparent;
+    --ion-background-color: transparent;
+  }
+
 * {
     font-family: Gilroy;
 }

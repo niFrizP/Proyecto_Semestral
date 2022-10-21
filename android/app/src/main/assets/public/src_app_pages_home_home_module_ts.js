@@ -70,7 +70,7 @@ HomePageModule = (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__decorate)([
             _angular_common__WEBPACK_IMPORTED_MODULE_4__.CommonModule,
             _angular_forms__WEBPACK_IMPORTED_MODULE_5__.FormsModule,
             _ionic_angular__WEBPACK_IMPORTED_MODULE_6__.IonicModule,
-            _home_routing_module__WEBPACK_IMPORTED_MODULE_0__.HomePageRoutingModule
+            _home_routing_module__WEBPACK_IMPORTED_MODULE_0__.HomePageRoutingModule,
         ],
         declarations: [_home_page__WEBPACK_IMPORTED_MODULE_1__.HomePage]
     })
@@ -90,43 +90,56 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "HomePage": () => (/* binding */ HomePage)
 /* harmony export */ });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! tslib */ 4929);
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! tslib */ 4929);
 /* harmony import */ var _home_page_html_ngResource__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./home.page.html?ngResource */ 8380);
 /* harmony import */ var _home_page_scss_ngResource__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./home.page.scss?ngResource */ 2260);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/core */ 2560);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 2560);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ 124);
-/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ionic/angular */ 3819);
-
 
 
 
 
 
 let HomePage = class HomePage {
-    constructor(activatedRouter, router, menu) {
-        this.activatedRouter = activatedRouter;
+    constructor(router) {
         this.router = router;
-        this.menu = menu;
-        this.username = '';
-        this.activatedRouter.queryParams.subscribe(params => {
-            if (this.router.getCurrentNavigation().extras.state) {
-                let usuario = this.router.getCurrentNavigation().extras.state.miusuario;
-                console.log("Llego el state: " + usuario.username);
-                this.username = usuario.username;
-            }
-        });
     }
-    verMenu() {
-        this.menu.open('first');
+    ngOnInit() {
+        this.subjects = [
+            {
+                img: 'assets/imgs/matematica.png',
+                name: 'Matematicas'
+            },
+            {
+                img: 'assets/imgs/antropologia.png',
+                name: 'Antropologia'
+            },
+            {
+                img: 'assets/imgs/comunicacion.png',
+                name: 'Comunicacion'
+            },
+            {
+                img: 'assets/imgs/estadistica.png',
+                name: 'Estadistica'
+            },
+            {
+                img: 'assets/imgs/programacion.png',
+                name: 'Programacion'
+            },
+            {
+                img: 'assets/imgs/ingles.png',
+                name: 'ingles'
+            },
+        ];
+    }
+    goToSubject() {
     }
 };
 HomePage.ctorParameters = () => [
-    { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__.ActivatedRoute },
-    { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__.Router },
-    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_3__.MenuController }
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__.Router }
 ];
-HomePage = (0,tslib__WEBPACK_IMPORTED_MODULE_4__.__decorate)([
-    (0,_angular_core__WEBPACK_IMPORTED_MODULE_5__.Component)({
+HomePage = (0,tslib__WEBPACK_IMPORTED_MODULE_3__.__decorate)([
+    (0,_angular_core__WEBPACK_IMPORTED_MODULE_4__.Component)({
         selector: 'app-home',
         template: _home_page_html_ngResource__WEBPACK_IMPORTED_MODULE_0__,
         styles: [_home_page_scss_ngResource__WEBPACK_IMPORTED_MODULE_1__]
@@ -143,7 +156,7 @@ HomePage = (0,tslib__WEBPACK_IMPORTED_MODULE_4__.__decorate)([
   \******************************************************/
 /***/ ((module) => {
 
-module.exports = "#container {\n  text-align: center;\n  position: absolute;\n  left: 0;\n  right: 0;\n  top: 50%;\n  transform: translateY(-50%);\n}\n\n#container strong {\n  font-size: 20px;\n  line-height: 26px;\n}\n\n#container p {\n  font-size: 16px;\n  line-height: 22px;\n  color: #8c8c8c;\n  margin: 0;\n}\n\n#container a {\n  text-decoration: none;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImhvbWUucGFnZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksa0JBQUE7RUFFQSxrQkFBQTtFQUNBLE9BQUE7RUFDQSxRQUFBO0VBQ0EsUUFBQTtFQUNBLDJCQUFBO0FBQUo7O0FBR0U7RUFDRSxlQUFBO0VBQ0EsaUJBQUE7QUFBSjs7QUFHRTtFQUNFLGVBQUE7RUFDQSxpQkFBQTtFQUVBLGNBQUE7RUFFQSxTQUFBO0FBRko7O0FBS0U7RUFDRSxxQkFBQTtBQUZKIiwiZmlsZSI6ImhvbWUucGFnZS5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiI2NvbnRhaW5lciB7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgXHJcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgICBsZWZ0OiAwO1xyXG4gICAgcmlnaHQ6IDA7XHJcbiAgICB0b3A6IDUwJTtcclxuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgtNTAlKTtcclxuICB9XHJcbiAgXHJcbiAgI2NvbnRhaW5lciBzdHJvbmcge1xyXG4gICAgZm9udC1zaXplOiAyMHB4O1xyXG4gICAgbGluZS1oZWlnaHQ6IDI2cHg7XHJcbiAgfVxyXG4gIFxyXG4gICNjb250YWluZXIgcCB7XHJcbiAgICBmb250LXNpemU6IDE2cHg7XHJcbiAgICBsaW5lLWhlaWdodDogMjJweDtcclxuICBcclxuICAgIGNvbG9yOiAjOGM4YzhjO1xyXG4gIFxyXG4gICAgbWFyZ2luOiAwO1xyXG4gIH1cclxuICBcclxuICAjY29udGFpbmVyIGEge1xyXG4gICAgdGV4dC1kZWNvcmF0aW9uOiBub25lO1xyXG4gIH0iXX0= */";
+module.exports = "ion-content {\n  --background: linear-gradient( to right , #012C56, #345678);\n}\n\n.main_content_div {\n  width: 100%;\n}\n\n.main_content_div .menu_btn {\n  position: relative;\n  top: 40px;\n  left: 10px;\n}\n\n.main_content_div ion-label {\n  display: block;\n  color: #012C56;\n  text-align: center;\n}\n\n.main_content_div .user_div {\n  padding: 20px;\n  width: 100%;\n  height: 260px;\n  background: linear-gradient(to right, #012C56, #345678);\n  display: flex;\n  padding-top: 40px;\n  justify-content: space-between;\n}\n\n.main_content_div .user_div .first_div {\n  padding-top: 35px;\n}\n\n.main_content_div .user_div .first_div .welcome {\n  font-size: 18px;\n  color: white;\n  font-weight: 500;\n}\n\n.main_content_div .user_div .first_div .username {\n  font-size: 24px;\n  color: white;\n  font-weight: 600;\n}\n\n.main_content_div .user_div .user_back {\n  height: 100px;\n  width: 80px;\n  box-shadow: 1px 3px 5px rgb(36, 36, 36);\n  background-position: top;\n  background-size: cover;\n  background-repeat: no-repeat;\n  border-radius: 7px;\n}\n\n.main_content_div .content_div {\n  background: white;\n  width: 100%;\n  border-top-right-radius: 75px;\n  margin-top: -90px;\n  padding-top: 30px;\n}\n\n.main_content_div .content_div .hola_asignatura {\n  font-weight: 600;\n  font-size: 18px;\n  margin-bottom: 10px;\n  padding-left: 5px;\n  margin-top: 10px;\n}\n\n.main_content_div .content_div ion-grid {\n  padding: 0px;\n}\n\n.main_content_div .content_div .col_div {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  text-align: center;\n  height: 150px;\n  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);\n  border-radius: 5px;\n}\n\n.main_content_div .content_div .col_div img {\n  width: 70px;\n}\n\n.main_content_div .content_div .col_div ion-label {\n  color: var(--ion-color-primary);\n  margin-top: 5px;\n}\n\n.animated {\n  animation-duration: 10s;\n  animation-fill-mode: both;\n}\n\n.bounceInUp {\n  animation-name: bounceInUp;\n}\n\n@keyframes bounceInUp {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateY(2000px);\n  }\n  60% {\n    opacity: 1;\n    -webkit-transform: translateY(-30px);\n  }\n  80% {\n    -webkit-transform: translateY(10px);\n  }\n  100% {\n    -webkit-transform: translateY(0);\n  }\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImhvbWUucGFnZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsMkRBQUE7QUFDRjs7QUFFQTtFQUNFLFdBQUE7QUFDRjs7QUFDRTtFQUNFLGtCQUFBO0VBQ0EsU0FBQTtFQUNBLFVBQUE7QUFDSjs7QUFFRTtFQUNFLGNBQUE7RUFDQSxjQUFBO0VBQ0Esa0JBQUE7QUFBSjs7QUFHRTtFQUNFLGFBQUE7RUFDQSxXQUFBO0VBQ0EsYUFBQTtFQUNBLHVEQUFBO0VBQ0EsYUFBQTtFQUNBLGlCQUFBO0VBQ0EsOEJBQUE7QUFESjs7QUFHSTtFQUNFLGlCQUFBO0FBRE47O0FBRU07RUFDRSxlQUFBO0VBQ0EsWUFBQTtFQUNBLGdCQUFBO0FBQVI7O0FBR007RUFDRSxlQUFBO0VBQ0EsWUFBQTtFQUNBLGdCQUFBO0FBRFI7O0FBS0k7RUFDRSxhQUFBO0VBQ0EsV0FBQTtFQUNBLHVDQUFBO0VBQ0Esd0JBQUE7RUFDQSxzQkFBQTtFQUNBLDRCQUFBO0VBQ0Esa0JBQUE7QUFITjs7QUFPRTtFQUNFLGlCQUFBO0VBQ0EsV0FBQTtFQUNBLDZCQUFBO0VBQ0EsaUJBQUE7RUFDQSxpQkFBQTtBQUxKOztBQU9JO0VBQ0UsZ0JBQUE7RUFDQSxlQUFBO0VBQ0EsbUJBQUE7RUFDQSxpQkFBQTtFQUNBLGdCQUFBO0FBTE47O0FBUUk7RUFDRSxZQUFBO0FBTk47O0FBU0k7RUFDRSxhQUFBO0VBQ0Esc0JBQUE7RUFDQSxtQkFBQTtFQUNBLHVCQUFBO0VBQ0Esa0JBQUE7RUFDQSxhQUFBO0VBQ0EsMENBQUE7RUFDQSxrQkFBQTtBQVBOOztBQVNNO0VBQ0UsV0FBQTtBQVBSOztBQVVNO0VBQ0UsK0JBQUE7RUFDQSxlQUFBO0FBUlI7O0FBZUE7RUFFRSx1QkFBQTtFQUVBLHlCQUFBO0FBWkY7O0FBa0NBO0VBRUUsMEJBQUE7QUFmRjs7QUFrQkE7RUFDRTtJQUNFLFVBQUE7SUFDQSxxQ0FBQTtFQWZGO0VBaUJBO0lBQ0UsVUFBQTtJQUNBLG9DQUFBO0VBZkY7RUFpQkE7SUFFRSxtQ0FBQTtFQWhCRjtFQW1CQTtJQUVFLGdDQUFBO0VBbEJGO0FBQ0YiLCJmaWxlIjoiaG9tZS5wYWdlLnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJpb24tY29udGVudHtcclxuICAtLWJhY2tncm91bmQ6IGxpbmVhci1ncmFkaWVudCggdG8gcmlnaHQgLCAjMDEyQzU2LCAjMzQ1Njc4KTtcclxufVxyXG5cclxuLm1haW5fY29udGVudF9kaXZ7XHJcbiAgd2lkdGg6IDEwMCU7XHJcblxyXG4gIC5tZW51X2J0bntcclxuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcclxuICAgIHRvcDogNDBweDtcclxuICAgIGxlZnQ6IDEwcHg7XHJcbiAgfVxyXG5cclxuICBpb24tbGFiZWx7XHJcbiAgICBkaXNwbGF5OiBibG9jaztcclxuICAgIGNvbG9yOiAjMDEyQzU2O1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gIH1cclxuXHJcbiAgLnVzZXJfZGl2e1xyXG4gICAgcGFkZGluZzogMjBweDtcclxuICAgIHdpZHRoOiAxMDAlO1xyXG4gICAgaGVpZ2h0OiAyNjBweDtcclxuICAgIGJhY2tncm91bmQ6bGluZWFyLWdyYWRpZW50KCB0byByaWdodCAsICMwMTJDNTYsICMzNDU2NzgpO1xyXG4gICAgZGlzcGxheTogZmxleDtcclxuICAgIHBhZGRpbmctdG9wOiA0MHB4O1xyXG4gICAganVzdGlmeS1jb250ZW50OiBzcGFjZS1iZXR3ZWVuO1xyXG5cclxuICAgIC5maXJzdF9kaXZ7XHJcbiAgICAgIHBhZGRpbmctdG9wOiAzNXB4O1xyXG4gICAgICAud2VsY29tZXtcclxuICAgICAgICBmb250LXNpemU6IDE4cHg7XHJcbiAgICAgICAgY29sb3I6IHdoaXRlO1xyXG4gICAgICAgIGZvbnQtd2VpZ2h0OiA1MDA7XHJcbiAgICAgIH1cclxuXHJcbiAgICAgIC51c2VybmFtZXtcclxuICAgICAgICBmb250LXNpemU6IDI0cHg7XHJcbiAgICAgICAgY29sb3I6IHdoaXRlO1xyXG4gICAgICAgIGZvbnQtd2VpZ2h0OiA2MDA7XHJcbiAgICAgIH1cclxuICAgIH1cclxuXHJcbiAgICAudXNlcl9iYWNre1xyXG4gICAgICBoZWlnaHQ6IDEwMHB4O1xyXG4gICAgICB3aWR0aDogODBweDtcclxuICAgICAgYm94LXNoYWRvdzogMXB4IDNweCA1cHggcmdiKDM2LCAzNiwgMzYpO1xyXG4gICAgICBiYWNrZ3JvdW5kLXBvc2l0aW9uOiB0b3A7XHJcbiAgICAgIGJhY2tncm91bmQtc2l6ZTogY292ZXI7XHJcbiAgICAgIGJhY2tncm91bmQtcmVwZWF0OiBuby1yZXBlYXQ7XHJcbiAgICAgIGJvcmRlci1yYWRpdXM6IDdweDtcclxuICAgIH1cclxuICB9XHJcblxyXG4gIC5jb250ZW50X2RpdntcclxuICAgIGJhY2tncm91bmQ6IHdoaXRlO1xyXG4gICAgd2lkdGg6IDEwMCU7XHJcbiAgICBib3JkZXItdG9wLXJpZ2h0LXJhZGl1czogNzVweDtcclxuICAgIG1hcmdpbi10b3A6IC05MHB4O1xyXG4gICAgcGFkZGluZy10b3A6IDMwcHg7XHJcblxyXG4gICAgLmhvbGFfYXNpZ25hdHVyYXtcclxuICAgICAgZm9udC13ZWlnaHQ6IDYwMDtcclxuICAgICAgZm9udC1zaXplOiAxOHB4O1xyXG4gICAgICBtYXJnaW4tYm90dG9tOiAxMHB4O1xyXG4gICAgICBwYWRkaW5nLWxlZnQ6IDVweDtcclxuICAgICAgbWFyZ2luLXRvcDogMTBweDtcclxuICAgIH1cclxuXHJcbiAgICBpb24tZ3JpZHtcclxuICAgICAgcGFkZGluZzogMHB4O1xyXG4gICAgfVxyXG5cclxuICAgIC5jb2xfZGl2e1xyXG4gICAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xyXG4gICAgICBhbGlnbi1pdGVtczogY2VudGVyO1xyXG4gICAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcclxuICAgICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gICAgICBoZWlnaHQ6IDE1MHB4O1xyXG4gICAgICBib3gtc2hhZG93OiAwcHggM3B4IDZweCByZ2JhKDAsMCwwLDAuMik7XHJcbiAgICAgIGJvcmRlci1yYWRpdXM6IDVweDtcclxuXHJcbiAgICAgIGltZ3tcclxuICAgICAgICB3aWR0aDogNzBweDtcclxuICAgICAgfVxyXG5cclxuICAgICAgaW9uLWxhYmVse1xyXG4gICAgICAgIGNvbG9yOnZhcigtLWlvbi1jb2xvci1wcmltYXJ5KTtcclxuICAgICAgICBtYXJnaW4tdG9wOiA1cHg7XHJcbiAgICAgIH1cclxuICAgIH1cclxuXHJcbiAgfVxyXG59XHJcblxyXG4uYW5pbWF0ZWR7XHJcbiAgLXdlYmtpdC1hbmltYXRpb24tZHVyYXRpb246IDEwcztcclxuICBhbmltYXRpb24tZHVyYXRpb246IDEwcztcclxuICAtd2Via2l0LWFuaW1hdGlvbi1maWxsLW1vZGU6IGJvdGg7XHJcbiAgYW5pbWF0aW9uLWZpbGwtbW9kZTogYm90aDtcclxufVxyXG5cclxuQC13ZWJraXQta2V5ZnJhbWVzIGJvdW5jZUluVXB7XHJcbiAgMCV7XHJcbiAgICBvcGFjaXR5OiAwO1xyXG4gICAgLXdlYmtpdC10cmFuc2Zvcm0gOnRyYW5zbGF0ZVkoMjAwMHB4KTtcclxuICB9XHJcbiAgNjAle1xyXG4gICAgb3BhY2l0eTogMTtcclxuICAgIC13ZWJraXQtdHJhbnNmb3JtOiB0cmFuc2xhdGVZKC0zMHB4KTtcclxuICB9XHJcbiAgODAle1xyXG5cclxuICAgIC13ZWJraXQtdHJhbnNmb3JtOiB0cmFuc2xhdGVZKDEwcHgpO1xyXG4gIH1cclxuXHJcbiAgMTAwJXtcclxuXHJcbiAgICAtd2Via2l0LXRyYW5zZm9ybTogdHJhbnNsYXRlWSgwKTtcclxuICB9XHJcbn1cclxuLmJvdW5jZUluVXB7XHJcbiAgLXdlYmtpdC1hbmltYXRpb24tbmFtZTogYm91bmNlSW5VcDtcclxuICBhbmltYXRpb24tbmFtZTogYm91bmNlSW5VcDtcclxufVxyXG5cclxuQGtleWZyYW1lcyBib3VuY2VJblVwe1xyXG4gIDAle1xyXG4gICAgb3BhY2l0eTogMDtcclxuICAgIC13ZWJraXQtdHJhbnNmb3JtIDp0cmFuc2xhdGVZKDIwMDBweCk7XHJcbiAgfVxyXG4gIDYwJXtcclxuICAgIG9wYWNpdHk6IDE7XHJcbiAgICAtd2Via2l0LXRyYW5zZm9ybTogdHJhbnNsYXRlWSgtMzBweCk7XHJcbiAgfVxyXG4gIDgwJXtcclxuXHJcbiAgICAtd2Via2l0LXRyYW5zZm9ybTogdHJhbnNsYXRlWSgxMHB4KTtcclxuICB9XHJcblxyXG4gIDEwMCV7XHJcblxyXG4gICAgLXdlYmtpdC10cmFuc2Zvcm06IHRyYW5zbGF0ZVkoMCk7XHJcbiAgfVxyXG59Il19 */";
 
 /***/ }),
 
@@ -153,9 +166,9 @@ module.exports = "#container {\n  text-align: center;\n  position: absolute;\n  
   \******************************************************/
 /***/ ((module) => {
 
-module.exports = "<ion-header>\n  <ion-toolbar>\n    <ion-icon slot=\"start\" name=\"menu\" size=\"large\" class=\"ion-padding\" (click)=\"verMenu()\"></ion-icon>\n    <ion-title>\n      Inicio\n    </ion-title>\n    <ion-text slot=\"end\">\n      <p>{{username||''}}</p>\n    </ion-text>\n    <ion-icon slot=\"end\" name=\"person-circle-outline\" class=\"ion-padding\" size=\"large\"></ion-icon>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content class=\"ion-padding\">\n  <ion-text color=\"tertiary\" type=\"ios\">\n    <h3 class=\"animate__animated animate__bounceInUp\">Bienvenido, <p>{{username||'anonimo'}}</p></h3>\n  </ion-text>\n</ion-content>";
+module.exports = "<ion-content>\r\n    <div class=\"main_content_div\">\r\n\r\n      <ion-buttons slot=\"start\" class=\"menu_btn\">\r\n        <ion-menu-button color=\"light\"></ion-menu-button>\r\n      </ion-buttons>\r\n\r\n      <div class=\"user_div\">\r\n        <div class=\"first_div\">\r\n          <ion-label class=\"welcome\">Bienvenido/a</ion-label>\r\n          <ion-label class=\"username\">Nicolás</ion-label>\r\n        </div>\r\n        <div class=\"user_back\" [style.backgroundImage]=\"'url(assets/01.jpg)'\"></div>\r\n      </div>\r\n\r\n      <div class=\"content_div animated bounceInUp\">\r\n        <ion-label class=\"hola_asignatura\">Hola, elija su asignatura</ion-label>\r\n\r\n        <ion-grid fixed>\r\n          <ion-row>\r\n            <ion-col size=\"6\" (click)=\"goToSubject()\" *ngFor=\"let item of subjects \">\r\n              <div class=\"col_div\">\r\n                <img src=\"{{this.subjects}}\" >\r\n                <ion-label>{{item.name}}</ion-label>\r\n              </div>\r\n            </ion-col>\r\n          </ion-row>\r\n        </ion-grid>\r\n      </div>\r\n    </div>\r\n</ion-content>";
 
 /***/ })
 
 }]);
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic3JjX2FwcF9wYWdlc19ob21lX2hvbWVfbW9kdWxlX3RzLmpzIiwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUF5QztBQUNjO0FBRWhCO0FBRXZDLE1BQU0sTUFBTSxHQUFXO0lBQ3JCO1FBQ0UsSUFBSSxFQUFFLEVBQUU7UUFDUixTQUFTLEVBQUUsZ0RBQVE7S0FDcEI7Q0FDRixDQUFDO0lBTVcscUJBQXFCLFNBQXJCLHFCQUFxQjs7QUFBckIscUJBQXFCO0lBSmpDLHVEQUFRLENBQUM7UUFDUixPQUFPLEVBQUUsQ0FBQyxrRUFBcUIsQ0FBQyxNQUFNLENBQUMsQ0FBQztRQUN4QyxPQUFPLEVBQUUsQ0FBQyx5REFBWSxDQUFDO0tBQ3hCLENBQUM7R0FDVyxxQkFBcUI7QUFBQTs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUNoQk87QUFDTTtBQUNGO0FBRUE7QUFFaUI7QUFFdkI7SUFXMUIsY0FBYyxTQUFkLGNBQWM7O0FBQWQsY0FBYztJQVQxQix1REFBUSxDQUFDO1FBQ1IsT0FBTyxFQUFFO1lBQ1AseURBQVk7WUFDWix1REFBVztZQUNYLHVEQUFXO1lBQ1gsdUVBQXFCO1NBQ3RCO1FBQ0QsWUFBWSxFQUFFLENBQUMsZ0RBQVEsQ0FBQztLQUN6QixDQUFDO0dBQ1csY0FBYztBQUFBOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUNuQmM7QUFDZ0I7QUFDVDtJQU9uQyxRQUFRLFNBQVIsUUFBUTtJQUluQixZQUNVLGVBQThCLEVBQzlCLE1BQWEsRUFDYixJQUFtQjtRQUZuQixvQkFBZSxHQUFmLGVBQWUsQ0FBZTtRQUM5QixXQUFNLEdBQU4sTUFBTSxDQUFPO1FBQ2IsU0FBSSxHQUFKLElBQUksQ0FBZTtRQUwvQixhQUFRLEdBQVEsRUFBRSxDQUFDO1FBUWYsSUFBSSxDQUFDLGVBQWUsQ0FBQyxXQUFXLENBQUMsU0FBUyxDQUFDLE1BQU0sR0FBRTtZQUNqRCxJQUFHLElBQUksQ0FBQyxNQUFNLENBQUMsb0JBQW9CLEVBQUUsQ0FBQyxNQUFNLENBQUMsS0FBSyxFQUFDO2dCQUVqRCxJQUFJLE9BQU8sR0FBQyxJQUFJLENBQUMsTUFBTSxDQUFDLG9CQUFvQixFQUFFLENBQUMsTUFBTSxDQUFDLEtBQUssQ0FBQyxTQUFTLENBQUM7Z0JBQ3RFLE9BQU8sQ0FBQyxHQUFHLENBQUMsa0JBQWtCLEdBQUcsT0FBTyxDQUFDLFFBQVEsQ0FBQyxDQUFDO2dCQUNuRCxJQUFJLENBQUMsUUFBUSxHQUFDLE9BQU8sQ0FBQyxRQUFRLENBQUM7YUFDaEM7UUFFSCxDQUFDLENBQUM7SUFHSixDQUFDO0lBRUQsT0FBTztRQUNMLElBQUksQ0FBQyxJQUFJLENBQUMsSUFBSSxDQUFDLE9BQU8sQ0FBQyxDQUFDO0lBQzFCLENBQUM7Ozs7Ozs7QUF6QlUsUUFBUTtJQUxwQix3REFBUyxDQUFDO1FBQ1QsUUFBUSxFQUFFLFVBQVU7UUFDcEIsaUVBQTZCOztLQUU5QixDQUFDO0dBQ1csUUFBUTtBQUFBIiwic291cmNlcyI6WyIuL3NyYy9hcHAvcGFnZXMvaG9tZS9ob21lLXJvdXRpbmcubW9kdWxlLnRzIiwiLi9zcmMvYXBwL3BhZ2VzL2hvbWUvaG9tZS5tb2R1bGUudHMiLCIuL3NyYy9hcHAvcGFnZXMvaG9tZS9ob21lLnBhZ2UudHMiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgTmdNb2R1bGUgfSBmcm9tICdAYW5ndWxhci9jb3JlJztcbmltcG9ydCB7IFJvdXRlcywgUm91dGVyTW9kdWxlIH0gZnJvbSAnQGFuZ3VsYXIvcm91dGVyJztcblxuaW1wb3J0IHsgSG9tZVBhZ2UgfSBmcm9tICcuL2hvbWUucGFnZSc7XG5cbmNvbnN0IHJvdXRlczogUm91dGVzID0gW1xuICB7XG4gICAgcGF0aDogJycsXG4gICAgY29tcG9uZW50OiBIb21lUGFnZSxcbiAgfVxuXTtcblxuQE5nTW9kdWxlKHtcbiAgaW1wb3J0czogW1JvdXRlck1vZHVsZS5mb3JDaGlsZChyb3V0ZXMpXSxcbiAgZXhwb3J0czogW1JvdXRlck1vZHVsZV0sXG59KVxuZXhwb3J0IGNsYXNzIEhvbWVQYWdlUm91dGluZ01vZHVsZSB7fVxuIiwiaW1wb3J0IHsgTmdNb2R1bGUgfSBmcm9tICdAYW5ndWxhci9jb3JlJztcbmltcG9ydCB7IENvbW1vbk1vZHVsZSB9IGZyb20gJ0Bhbmd1bGFyL2NvbW1vbic7XG5pbXBvcnQgeyBGb3Jtc01vZHVsZSB9IGZyb20gJ0Bhbmd1bGFyL2Zvcm1zJztcblxuaW1wb3J0IHsgSW9uaWNNb2R1bGUgfSBmcm9tICdAaW9uaWMvYW5ndWxhcic7XG5cbmltcG9ydCB7IEhvbWVQYWdlUm91dGluZ01vZHVsZSB9IGZyb20gJy4vaG9tZS1yb3V0aW5nLm1vZHVsZSc7XG5cbmltcG9ydCB7IEhvbWVQYWdlIH0gZnJvbSAnLi9ob21lLnBhZ2UnO1xuXG5ATmdNb2R1bGUoe1xuICBpbXBvcnRzOiBbXG4gICAgQ29tbW9uTW9kdWxlLFxuICAgIEZvcm1zTW9kdWxlLFxuICAgIElvbmljTW9kdWxlLFxuICAgIEhvbWVQYWdlUm91dGluZ01vZHVsZVxuICBdLFxuICBkZWNsYXJhdGlvbnM6IFtIb21lUGFnZV1cbn0pXG5leHBvcnQgY2xhc3MgSG9tZVBhZ2VNb2R1bGUge31cbiIsImltcG9ydCB7IENvbXBvbmVudH0gZnJvbSAnQGFuZ3VsYXIvY29yZSc7XG5pbXBvcnQgeyBBY3RpdmF0ZWRSb3V0ZSwgUm91dGVyIH0gZnJvbSAnQGFuZ3VsYXIvcm91dGVyJztcbmltcG9ydCB7IE1lbnVDb250cm9sbGVyIH0gZnJvbSAnQGlvbmljL2FuZ3VsYXInO1xuXG5AQ29tcG9uZW50KHtcbiAgc2VsZWN0b3I6ICdhcHAtaG9tZScsXG4gIHRlbXBsYXRlVXJsOiAnaG9tZS5wYWdlLmh0bWwnLFxuICBzdHlsZVVybHM6IFsnaG9tZS5wYWdlLnNjc3MnXSxcbn0pXG5leHBvcnQgY2xhc3MgSG9tZVBhZ2V7XG5cbnVzZXJuYW1lOnN0cmluZz0nJztcblxuICBjb25zdHJ1Y3RvcihcbiAgICBwcml2YXRlIGFjdGl2YXRlZFJvdXRlcjpBY3RpdmF0ZWRSb3V0ZSwgXG4gICAgcHJpdmF0ZSByb3V0ZXI6Um91dGVyLFxuICAgIHByaXZhdGUgbWVudTpNZW51Q29udHJvbGxlcixcbiAgKSB7XG5cbiAgICB0aGlzLmFjdGl2YXRlZFJvdXRlci5xdWVyeVBhcmFtcy5zdWJzY3JpYmUocGFyYW1zPT57XG4gICAgICBpZih0aGlzLnJvdXRlci5nZXRDdXJyZW50TmF2aWdhdGlvbigpLmV4dHJhcy5zdGF0ZSl7XG5cbiAgICAgICAgbGV0IHVzdWFyaW89dGhpcy5yb3V0ZXIuZ2V0Q3VycmVudE5hdmlnYXRpb24oKS5leHRyYXMuc3RhdGUubWl1c3VhcmlvO1xuICAgICAgICBjb25zb2xlLmxvZyhcIkxsZWdvIGVsIHN0YXRlOiBcIiArIHVzdWFyaW8udXNlcm5hbWUpO1xuICAgICAgICB0aGlzLnVzZXJuYW1lPXVzdWFyaW8udXNlcm5hbWU7XG4gICAgICB9XG4gICAgICBcbiAgICB9KVxuXG5cbiAgfVxuXG4gIHZlck1lbnUoKXtcbiAgICB0aGlzLm1lbnUub3BlbignZmlyc3QnKTtcbiAgfVxuXG59XG4iXSwibmFtZXMiOltdLCJzb3VyY2VSb290Ijoid2VicGFjazovLy8iLCJ4X2dvb2dsZV9pZ25vcmVMaXN0IjpbXX0=
+//# sourceMappingURL=src_app_pages_home_home_module_ts.js.map

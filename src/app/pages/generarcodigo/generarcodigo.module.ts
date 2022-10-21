@@ -14,6 +14,7 @@ import { GenerarcodigoPage } from './generarcodigo.page';
     FormsModule,
     IonicModule,
     GenerarcodigoPageRoutingModule
+  
   ],
   declarations: [GenerarcodigoPage]
 })
