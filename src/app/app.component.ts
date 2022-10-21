@@ -17,9 +17,10 @@ export class AppComponent {
   }
 
   async ngOnInit() {
+    console.log('xd');
+    //debugger;
     // If using a custom driver:
     //await this.storage.defineDriver(MyCustomDriver)
     await this.storage.create();
   }
-
 }

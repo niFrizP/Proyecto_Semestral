@@ -1,10 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { NavigationExtras, Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
-import { Usuario } from 'src/app/interfaces/usuario';
-import { Storage } from '@ionic/storage-angular';
-
-
 
 @Component({
   selector: 'app-login',
@@ -12,51 +8,32 @@ import { Storage } from '@ionic/storage-angular';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
-
-  registrado:Usuario=null;
-
-  usuario:Usuario={
+  usuario={
     username:'',
-    password:'',
+    password:''
   }
 
+  token = localStorage.getItem("token");
 
 
   constructor(
     private router:Router,
     private alertController:AlertController,
-    private storage:Storage
-        ){ }
+    ){ }
 
   ngOnInit() {
+    console.log("token: ", this.token)
+    this.router.navigate(["/home"]);
+    
   }
 
 
-  onSubmit()
-  {
-    console.log(this.usuario);
-    this.logear();
+  onSubmit(){
+    console.log('xd');
   }
 
-  async logear()
-  {
-    this.registrado =await this.storage.get(this.usuario.username);
-
-    if (this.registrado!=null)
-    {
-      if(this.usuario.username==this.registrado.username && this.usuario.password==this.registrado.password)
-      {
-        console.log("Puede pasar");
-        await this.storage.set('session',this.registrado.username);
-        this.router.navigate(['/home']);
-      }
-      else{
-        console.log("Usuario no existe!!!");
-      }
-    }
-    else{
-      console.log("Pa la casa por agilao");
-    }
+  Login(){
+    localStorage.setItem('token',this.token)
   }
 
   async presentAlert() {
