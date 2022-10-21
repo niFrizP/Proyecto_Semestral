@@ -7,7 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { LoginPageRoutingModule } from './login-routing.module';
 
 import { LoginPage } from './login.page';
-import { SharedModule } from 'src/app/components/shared.module';
+import { IonicStorageModule } from '@ionic/storage-angular';
 
 @NgModule({
   imports: [
@@ -15,7 +15,7 @@ import { SharedModule } from 'src/app/components/shared.module';
     FormsModule,
     IonicModule,
     LoginPageRoutingModule,
-    SharedModule,
+    IonicStorageModule.forRoot()
   ],
   declarations: [LoginPage]
 })

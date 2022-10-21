@@ -116,7 +116,7 @@ let HomePage = class HomePage {
             },
             {
                 img: 'assets/imgs/comunicacion.png',
-                name: 'Comunicacion'
+                name: 'Comunicacion',
             },
             {
                 img: 'assets/imgs/estadistica.png',
@@ -166,7 +166,7 @@ module.exports = "ion-content {\n  --background: linear-gradient( to right , #01
   \******************************************************/
 /***/ ((module) => {
 
-module.exports = "<ion-content>\r\n    <div class=\"main_content_div\">\r\n\r\n      <ion-buttons slot=\"start\" class=\"menu_btn\">\r\n        <ion-menu-button color=\"light\"></ion-menu-button>\r\n      </ion-buttons>\r\n\r\n      <div class=\"user_div\">\r\n        <div class=\"first_div\">\r\n          <ion-label class=\"welcome\">Bienvenido/a</ion-label>\r\n          <ion-label class=\"username\">Nicolás</ion-label>\r\n        </div>\r\n        <div class=\"user_back\" [style.backgroundImage]=\"'url(assets/01.jpg)'\"></div>\r\n      </div>\r\n\r\n      <div class=\"content_div animated bounceInUp\">\r\n        <ion-label class=\"hola_asignatura\">Hola, elija su asignatura</ion-label>\r\n\r\n        <ion-grid fixed>\r\n          <ion-row>\r\n            <ion-col size=\"6\" (click)=\"goToSubject()\" *ngFor=\"let item of subjects \">\r\n              <div class=\"col_div\">\r\n                <img src=\"{{this.subjects}}\" >\r\n                <ion-label>{{item.name}}</ion-label>\r\n              </div>\r\n            </ion-col>\r\n          </ion-row>\r\n        </ion-grid>\r\n      </div>\r\n    </div>\r\n</ion-content>";
+module.exports = "<ion-content>\r\n  <div class=\"main_content_div\">\r\n\r\n    <ion-buttons slot=\"start\" class=\"menu_btn\">\r\n      <ion-menu-button color=\"light\"></ion-menu-button>\r\n    </ion-buttons>\r\n\r\n    <div class=\"user_div\">\r\n      <div class=\"first_div\">\r\n        <ion-label class=\"welcome\">Bienvenido/a</ion-label>\r\n        <ion-label class=\"username\">Nicolás</ion-label>\r\n      </div>\r\n      <div class=\"user_back\" [style.backgroundImage]=\"'url(assets/01.jpg)'\"></div>\r\n    </div>\r\n\r\n    <div class=\"content_div animated bounceInUp\">\r\n      <ion-label class=\"hola_asignatura\">Hola, elija su asignatura</ion-label>\r\n\r\n      <ion-grid fixed>\r\n        <ion-row>\r\n          <ion-col size=\"6\" (click)=\"goToSubject()\" *ngFor=\"let item of subjects \">\r\n            <div class=\"col_div\">\r\n              <img src=\"{{item.img}}\" >\r\n              <ion-label>{{item.name}}</ion-label>\r\n            </div>\r\n          </ion-col>\r\n        </ion-row>\r\n      </ion-grid>\r\n    </div>\r\n  </div>\r\n</ion-content>\r\n";
 
 /***/ })
 

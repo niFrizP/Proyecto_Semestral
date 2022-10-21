@@ -1422,6 +1422,10 @@ sub {
   src: url('Gilroy-Bold.ttf');
   font-weight: 700;
 }
+body.scanner-active {
+  --background: transparent;
+  --ion-background-color: transparent;
+}
 * {
   font-family: Gilroy;
 }

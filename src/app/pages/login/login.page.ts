@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { NavigationExtras, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
+import { Usuario } from 'src/app/interfaces/usuario';
+import { Storage } from '@ionic/storage-angular';
+
+
 
 @Component({
   selector: 'app-login',
@@ -8,15 +12,21 @@ import { AlertController } from '@ionic/angular';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
-  usuario={
+
+  registrado:Usuario=null;
+
+  usuario:Usuario={
     username:'',
-    password:''
+    password:'',
   }
+
+
 
   constructor(
     private router:Router,
     private alertController:AlertController,
-    ){ }
+    private storage:Storage
+        ){ }
 
   ngOnInit() {
   }
@@ -24,7 +34,29 @@ export class LoginPage implements OnInit {
 
   onSubmit()
   {
+    console.log(this.usuario);
+    this.logear();
+  }
 
+  async logear()
+  {
+    this.registrado =await this.storage.get(this.usuario.username);
+
+    if (this.registrado!=null)
+    {
+      if(this.usuario.username==this.registrado.username && this.usuario.password==this.registrado.password)
+      {
+        console.log("Puede pasar");
+        await this.storage.set('session',this.registrado.username);
+        this.router.navigate(['/home']);
+      }
+      else{
+        console.log("Usuario no existe!!!");
+      }
+    }
+    else{
+      console.log("Pa la casa por agilao");
+    }
   }
 
   async presentAlert() {

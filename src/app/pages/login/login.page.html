@@ -1,7 +1,7 @@
 <ion-content class="ion-padding">
   <h1>Bienvenido/a,</h1>
   <h3>Inicia sesión para continuar!</h3>
-  <form>
+  <form #form="ngForm" (ngSubmit)="onSubmit()">
   
   <ion-item>
       <ion-label position="floating">Usuario</ion-label>
@@ -13,8 +13,8 @@
     </ion-item>
 
     <!-- <app-button label="Login"></app-button> -->
-    <ion-button [routerLink]="['/home']">Login</ion-button>
-    <ion-button [routerLink]="['/registro']">Registrarse</ion-button>
+    <ion-button expand="full" color="primary" type="submit" [disabled]="form.invalid" class="ion-margin-top">Login</ion-button>
+    <ion-item [routerLink]="['/registro']">Crear una cuenta</ion-item>
 
 
   </form>

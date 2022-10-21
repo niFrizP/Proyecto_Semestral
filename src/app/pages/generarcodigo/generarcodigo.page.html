@@ -1,23 +1,16 @@
-<ion-header [style.visibility]="content_visibility">
+<ion-header>
   <ion-toolbar>
     <ion-icon slot="start" name="menu" size="large" class="ion-padding" (click)="verMenu()"></ion-icon>
-    <ion-title>Generador QR</ion-title>
+    <ion-title>Lector QR</ion-title>
   </ion-toolbar>
 </ion-header>
 
-
 <ion-content [style.visibility]="content_visibility">
-  <ion-card-content>
-    <p>Escanee el codigo para asistencia</p>
-    <img src="/assets/QR.png"/>
-  </ion-card-content>
 
   <ion-button 
     expand="block" 
     class="ion-margin" 
-    (click)="startScan()">
-    Scan QR Code
-  </ion-button>
+    (click)="startScan()"> Escanear QR </ion-button>
 
   <ion-item *ngIf="scannedResult">
     <ion-label class="ion-text-wrap">Scanned Result: {{scannedResult}}</ion-label>

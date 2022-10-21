@@ -55,6 +55,30 @@ const routes = [
         path: 'registro',
         loadChildren: () => __webpack_require__.e(/*! import() */ "src_app_pages_registro_registro_module_ts").then(__webpack_require__.bind(__webpack_require__, /*! ./pages/registro/registro.module */ 8712)).then(m => m.RegistroPageModule)
     },
+    {
+        path: 'matematicas',
+        loadChildren: () => __webpack_require__.e(/*! import() */ "src_app_pages_matematicas_matematicas_module_ts").then(__webpack_require__.bind(__webpack_require__, /*! ./pages/matematicas/matematicas.module */ 5618)).then(m => m.MatematicasPageModule)
+    },
+    {
+        path: 'antropologia',
+        loadChildren: () => __webpack_require__.e(/*! import() */ "src_app_pages_antropologia_antropologia_module_ts").then(__webpack_require__.bind(__webpack_require__, /*! ./pages/antropologia/antropologia.module */ 2670)).then(m => m.AntropologiaPageModule)
+    },
+    {
+        path: 'comunicacion',
+        loadChildren: () => __webpack_require__.e(/*! import() */ "src_app_pages_comunicacion_comunicacion_module_ts").then(__webpack_require__.bind(__webpack_require__, /*! ./pages/comunicacion/comunicacion.module */ 7933)).then(m => m.ComunicacionPageModule)
+    },
+    {
+        path: 'estadistica',
+        loadChildren: () => __webpack_require__.e(/*! import() */ "src_app_pages_estadistica_estadistica_module_ts").then(__webpack_require__.bind(__webpack_require__, /*! ./pages/estadistica/estadistica.module */ 1123)).then(m => m.EstadisticaPageModule)
+    },
+    {
+        path: 'ingles',
+        loadChildren: () => __webpack_require__.e(/*! import() */ "src_app_pages_ingles_ingles_module_ts").then(__webpack_require__.bind(__webpack_require__, /*! ./pages/ingles/ingles.module */ 7949)).then(m => m.InglesPageModule)
+    },
+    {
+        path: 'programacion',
+        loadChildren: () => __webpack_require__.e(/*! import() */ "src_app_pages_programacion_programacion_module_ts").then(__webpack_require__.bind(__webpack_require__, /*! ./pages/programacion/programacion.module */ 7556)).then(m => m.ProgramacionPageModule)
+    },
 ];
 let AppRoutingModule = class AppRoutingModule {
 };
@@ -494,7 +518,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /***/ ((module) => {
 
 "use strict";
-module.exports = "<ion-app>\r\n  <ion-menu side=\"start\" menuId=\"first\" contentId=\"main\">\r\n    <ion-header>\r\n      <ion-toolbar>\r\n        <ion-title>Menú</ion-title>\r\n        <ion-icon slot=\"end\" name=\"close\" size=\"large\" class=\"ion-padding\" (click)=\"cerrarMenu()\">\r\n        </ion-icon>\r\n      </ion-toolbar>\r\n    </ion-header>\r\n    <ion-content>\r\n      <ion-list>\r\n        <ion-item detail routerLink=\"/home\" (click)=\"cerrarMenu()\">\r\n          <ion-icon slot=\"start\" name=\"home-outline\"></ion-icon>\r\n          Inicio\r\n        </ion-item>\r\n        <ion-item detail routerLink=\"/listado\" (click)=\"cerrarMenu()\">\r\n          <ion-icon slot=\"start\" name=\"list-outline\"></ion-icon>\r\n          Lista\r\n        </ion-item>\r\n        <ion-item detail routerLink=\"/generarcodigo\" (click)=\"cerrarMenu()\">\r\n          <ion-icon slot=\"start\" name=\"qr-code-outline\"></ion-icon>\r\n          Generar QR\r\n        </ion-item>\r\n        <ion-item detail routerLink=\"/acerca\" (click)=\"cerrarMenu()\">\r\n          <ion-icon slot=\"start\" name=\"information-circle-outline\"></ion-icon>\r\n          Acerca de\r\n        </ion-item>\r\n      </ion-list>\r\n    </ion-content>\r\n\r\n  </ion-menu>\r\n  <ion-router-outlet id=\"main\"></ion-router-outlet>\r\n</ion-app>\r\n";
+module.exports = "<ion-app>\r\n  <ion-menu side=\"start\" menuId=\"first\" contentId=\"main\">\r\n    <ion-header>\r\n      <ion-toolbar>\r\n        <ion-title>Menú</ion-title>\r\n        <ion-icon slot=\"end\" name=\"close\" size=\"large\" class=\"ion-padding\" (click)=\"cerrarMenu()\">\r\n        </ion-icon>\r\n      </ion-toolbar>\r\n    </ion-header>\r\n    <ion-content>\r\n      <ion-list>\r\n        <ion-item detail routerLink=\"/home\" (click)=\"cerrarMenu()\">\r\n          <ion-icon slot=\"start\" name=\"home-outline\"></ion-icon>\r\n          Inicio\r\n        </ion-item>\r\n        <ion-item detail routerLink=\"/listado\" (click)=\"cerrarMenu()\">\r\n          <ion-icon slot=\"start\" name=\"list-outline\"></ion-icon>\r\n          Asistencia\r\n        </ion-item>\r\n        <ion-item detail routerLink=\"/generarcodigo\" (click)=\"cerrarMenu()\">\r\n          <ion-icon slot=\"start\" name=\"qr-code-outline\"></ion-icon>\r\n          Leer QR\r\n        </ion-item>\r\n        <ion-item detail routerLink=\"/acerca\" (click)=\"cerrarMenu()\">\r\n          <ion-icon slot=\"start\" name=\"information-circle-outline\"></ion-icon>\r\n          Acerca de\r\n        </ion-item>\r\n      </ion-list>\r\n    </ion-content>\r\n\r\n  </ion-menu>\r\n  <ion-router-outlet id=\"main\"></ion-router-outlet>\r\n</ion-app>\r\n";
 
 /***/ })
 
