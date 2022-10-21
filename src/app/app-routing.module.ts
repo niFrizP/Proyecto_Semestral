@@ -40,6 +40,30 @@ const routes: Routes = [
     path: 'registro',
     loadChildren: () => import('./pages/registro/registro.module').then( m => m.RegistroPageModule)
   },
+  {
+    path: 'matematicas',
+    loadChildren: () => import('./pages/matematicas/matematicas.module').then( m => m.MatematicasPageModule)
+  },
+  {
+    path: 'antropologia',
+    loadChildren: () => import('./pages/antropologia/antropologia.module').then( m => m.AntropologiaPageModule)
+  },
+  {
+    path: 'comunicacion',
+    loadChildren: () => import('./pages/comunicacion/comunicacion.module').then( m => m.ComunicacionPageModule)
+  },
+  {
+    path: 'estadistica',
+    loadChildren: () => import('./pages/estadistica/estadistica.module').then( m => m.EstadisticaPageModule)
+  },
+  {
+    path: 'ingles',
+    loadChildren: () => import('./pages/ingles/ingles.module').then( m => m.InglesPageModule)
+  },
+  {
+    path: 'programacion',
+    loadChildren: () => import('./pages/programacion/programacion.module').then( m => m.ProgramacionPageModule)
+  },
 
 ];
 
